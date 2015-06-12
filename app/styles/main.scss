@@ -14,6 +14,37 @@ body {
   padding: 0;
 }
 
+.container,  {
+  border:black solid 2px;
+}
+
+/* Type */
+
+.madLibTitle {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.libInput {
+  margin-top:1em;
+}
+
+.libTerm {
+  color:blue;
+  font-size: 1.25em;
+}
+
+.emptyTerm {
+  color:red;
+  opacity:.5;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+
+
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -71,6 +102,9 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
+  }
+  .madLibTitle {
+    font-size: 4.5em;
   }
 
   /* Remove the padding we set earlier */
