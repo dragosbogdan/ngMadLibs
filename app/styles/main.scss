@@ -23,9 +23,14 @@ body {
   border:black solid 2px;
 }
 
+.madLib {
+  margin: 3em .25em 4em .25em;
+
+}
+
 /* Type */
 
-.madLibTitle {
+.madLibTitle, .helpLine {
   text-align: center;
   font-size: 1.5em;
   margin-top: 0;
