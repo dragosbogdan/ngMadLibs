@@ -15,12 +15,12 @@
     <!-- endbuild -->
   </head>
   <body ng-app="ngMadLibsApp">
-      <!--[if lt IE 7]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-      <![endif]-->
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-      <!-- Add your site or application content here -->
-    <div class="container mainContent">
+    <!-- Add your site or application content here -->
+    <div class="container mainContent" ng-controller="libMaker">
       <div class="row">
         <div class="col-xs-4">
           <img class="img-responsive" src="./images/mad-lib-happy-face.png" alt="happy face">
@@ -33,6 +33,23 @@
       <div class="row">
         <div class="col-xs-12">
           <h2 class="helpLine">Please provide the following words:</h2>
+          
+          <div class="row">
+            <div class="col-xs-12">
+              <label>
+                <input type="radio" name="genderOptions" id="male" value="male">
+                Male
+              </label>
+            </div>
+
+            <div class="col-xs-12">
+              <label>
+                <input type="radio" name="genderOptions" id="female" value="female">
+                Female
+              </label>
+            </div>
+          </div>
+
           <div class="row">
             <div class="col-sm-4">
               <input type="text" class="form-control libInput" ng-model="maleName" placeholder="Male name">
@@ -55,7 +72,7 @@
       </div><!-- row -->
       <div class="row madLib">
         <div class="col-xs-12">
-          <p><span ng-if="maleName" class="libTerm">{{maleName}}</span><span ng-if="!maleName" class="emptyTerm">maleName</span> was a <span ng-if="jobTitle" class="libTerm">{{jobTitle}}</span><span ng-if="!jobTitle" class="emptyTerm">jobTitle</span> who loved technology. Although she loved parts of her job, she absolutely hated  <span ng-if="tediousTask" class="libTerm">{{tediousTask}}</span><span ng-if="!tediousTask" class="emptyTerm">tediousTask</span> and <span ng-if="dirtyTask" class="libTerm">{{dirtyTask}}</span><span ng-if="!dirtyTask" class="emptyTerm">dirtyTask</span>. So, <span ng-if="maleName" class="libTerm">{{maleName}}</span><span ng-if="!maleName" class="emptyTerm">maleName</span> met with her life mentor <span ng-if="celebrity" class="libTerm">{{celebrity}}</span><span ng-if="!celebrity" class="emptyTerm">celebrity</span> who told her to learn how to <span ng-if="uselessSkill" class="libTerm">{{uselessSkill}}</span><span ng-if="!uselessSkill" class="emptyTerm">uselessSkill</span> with Thinkful. Thinkful didn't offer a course on <span ng-if="uselessSkill" class="libTerm">{{uselessSkill}}</span> <span ng-if="!uselessSkill" class="emptyTerm">uselessSkill</span> so she studied programming instead.</p>
+          <p><span ng-if="maleName" class="libTerm">{{maleName}}</span> was a <span ng-if="jobTitle" class="libTerm">{{jobTitle}}</span><span ng-if="!jobTitle" class="emptyTerm">jobTitle</span> who loved technology. Although she loved parts of her job, she absolutely hated  <span ng-if="tediousTask" class="libTerm">{{tediousTask}}</span><span ng-if="!tediousTask" class="emptyTerm">tediousTask</span> and <span ng-if="dirtyTask" class="libTerm">{{dirtyTask}}</span><span ng-if="!dirtyTask" class="emptyTerm">dirtyTask</span>. So, <span ng-if="maleName" class="libTerm">{{maleName}}</span><span ng-if="!maleName" class="emptyTerm">maleName</span> met with her life mentor <span ng-if="celebrity" class="libTerm">{{celebrity}}</span><span ng-if="!celebrity" class="emptyTerm">celebrity</span> who told her to learn how to <span ng-if="uselessSkill" class="libTerm">{{uselessSkill}}</span><span ng-if="!uselessSkill" class="emptyTerm">uselessSkill</span> with Thinkful. Thinkful didn't offer a course on <span ng-if="uselessSkill" class="libTerm">{{uselessSkill}}</span> <span ng-if="!uselessSkill" class="emptyTerm">uselessSkill</span> so she studied programming instead.</p>
  
           <p>What a great decision! With her new skills, <span ng-if="maleName" class="libTerm">{{maleName}}</span><span ng-if="!maleName" class="emptyTerm">maleName</span> built a(n) <span ng-if="adjective" class="libTerm">{{adjective}}</span><span ng-if="!adjective" class="emptyTerm">adjective</span> robot named <span ng-if="obnoxiousCelebrity" class="libTerm">{{obnoxiousCelebrity}}</span><span ng-if="!obnoxiousCelebrity" class="emptyTerm">obnoxiousCelebrity</span> that not only loved <span ng-if="dirtyTask" class="libTerm">{{dirtyTask}}</span><span ng-if="!dirtyTask" class="emptyTerm">dirtyTask</span> but did it <span ng-if="hugeNumber" class="libTerm">{{hugeNumber}}</span><span ng-if="!hugeNumber" class="emptyTerm">hugeNumber</span> faster.</p>
         </div>
@@ -86,6 +103,7 @@
           <!-- build:js({.tmp,app}) scripts/scripts.js -->
           <script src="scripts/app.js"></script>
           <script src="scripts/controllers/main.js"></script>
+          <script src="scripts/controllers/libMaker.js"></script>
           <!-- endbuild -->
 </body>
 </html>
