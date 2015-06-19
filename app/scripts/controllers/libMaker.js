@@ -9,7 +9,5 @@
  */
 angular.module('ngMadLibsApp')
   .controller('libMaker', function ($scope) {
-
-  	
-
+  	$scope.gender = document.querySelector('.gender:checked').getAttribute('value');
   });
