@@ -9,5 +9,6 @@
  */
 angular.module('ngMadLibsApp')
   .controller('libMaker', function ($scope) {
-  	$scope.gender = document.querySelector('.gender:checked').getAttribute('value');
+	$scope.maleGender = ['he', 'his', 'him'];
+	$scope.femaleGender = ['she', 'her', 'her'];
   });
