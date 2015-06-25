@@ -46,18 +46,22 @@
           <div class="row genderSelect">
             <div class="col-xs-12">
               <label>
-                <input type="radio" name="genderOptions" id="male" ng-model="maleGender">
+                <input type="radio" name="genderOptions" id="male" value="male" ng-model="gender">
+                <!-- input type="radio" name="genderOptions" id="male" ng-model="maleGender" -->
                 Male
               </label>
             </div>
 
             <div class="col-xs-12">
               <label>
-                <input type="radio" name="genderOptions" id="female" ng-model="femaleGender">
+                <input type="radio" name="genderOptions" id="female" value="female" ng-model="gender">
+                <!--input type="radio" name="genderOptions" id="female" ng-model="femaleGender" -->
                 Female
               </label>
             </div>
           </div>
+
+          <div class="testingView">gender value: {{gender}}</div>
 
           <div class="row">
             <div class="col-sm-4">
