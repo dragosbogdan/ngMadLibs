@@ -10,8 +10,4 @@
 angular.module('ngMadLibsApp')
   .controller('libMaker', function ($scope) {
   	$scope.gender = 'Unspecified';
-
-	$scope.maleGender = ['he', 'his', 'him'];
-	$scope.femaleGender = ['she', 'her', 'her'];
-
   });
