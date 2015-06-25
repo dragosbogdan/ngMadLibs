@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>main.scss</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="../../doc-style.css" />
+  <script src="../../doc-filelist.js"></script>
+  <script>
+    var relativeDir = "../../", thisFile = "app/styles/main.scss", defaultSidebar = true;
+  </script>
+  <script src="../../doc-script.js"></script>
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container"><div class="background highlight"></div>
+<table cellpadding="0" cellspacing="0">
+  <tbody>
+      <tr>
+        <td class="docs">
+          <h1>main.scss</h1>
+        </td>
+        <td class="code highlight"></td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-1" id="section-1">&#182;</a>
+</div>
+
+        </td>
+        <td class="code highlight"><div class="highlight"><pre><span class="nv">$icon-font-path</span><span class="o">:</span> <span class="s2">&quot;../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/&quot;</span><span class="p">;</span>
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-2" id="section-2">&#182;</a>
+</div>
+<p>bower:scss</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+<span class="k">@import</span> <span class="s2">&quot;bootstrap-sass-official/assets/stylesheets/_bootstrap.scss&quot;</span><span class="p">;</span>
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-3" id="section-3">&#182;</a>
+</div>
+<p>endbower</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+
+<span class="nc">.browsehappy</span> <span class="p">{</span>
+  <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span><span class="mf">.2</span><span class="kt">em</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="na">background</span><span class="o">:</span> <span class="mh">#ccc</span><span class="p">;</span>
+  <span class="na">color</span><span class="o">:</span> <span class="mh">#000</span><span class="p">;</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span><span class="mf">.2</span><span class="kt">em</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.mainContent</span> <span class="p">{</span>
+  <span class="na">width</span><span class="o">:</span> <span class="mi">75</span><span class="kt">%</span><span class="p">;</span>
+  <span class="na">max-width</span><span class="o">:</span><span class="mi">500</span><span class="kt">px</span><span class="p">;</span>  
+<span class="p">}</span>
+
+<span class="nc">.container</span><span class="o">,</span>  <span class="p">{</span>
+  <span class="nt">border</span><span class="nd">:black</span> <span class="nt">solid</span> <span class="nt">2px</span><span class="o">;</span>
+<span class="p">}</span>
+
+<span class="nc">.madLib</span> <span class="p">{</span>
+  <span class="na">margin</span><span class="o">:</span> <span class="mi">3</span><span class="kt">em</span> <span class="mf">.25</span><span class="kt">em</span> <span class="mi">4</span><span class="kt">em</span> <span class="mf">.25</span><span class="kt">em</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="cm">/* Type */</span>
+
+<span class="nc">.madLibTitle</span><span class="o">,</span> <span class="nc">.helpLine</span> <span class="p">{</span>
+  <span class="na">text-align</span><span class="o">:</span> <span class="no">center</span><span class="p">;</span>
+  <span class="na">font-size</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">em</span><span class="p">;</span>
+  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.libInput</span> <span class="p">{</span>
+  <span class="na">margin-top</span><span class="o">:</span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.libTerm</span> <span class="p">{</span>
+  <span class="nt">color</span><span class="nd">:blue</span><span class="o">;</span>
+  <span class="nt">font-size</span><span class="nd">:</span> <span class="nt">1</span><span class="nc">.25em</span><span class="o">;</span>
+<span class="p">}</span>
+
+<span class="nc">.emptyTerm</span> <span class="p">{</span>
+  <span class="nt">color</span><span class="nd">:red</span><span class="o">;</span>
+  <span class="nt">opacity</span><span class="nd">:</span><span class="nc">.5</span><span class="o">;</span>
+  <span class="nt">font-style</span><span class="nd">:</span> <span class="nt">italic</span><span class="o">;</span>
+<span class="p">}</span>
+
+
+
+
+<span class="cm">/* Everything but the jumbotron gets side spacing for mobile first views */</span>
+<span class="nc">.header</span><span class="o">,</span>
+<span class="nc">.marketing</span><span class="o">,</span>
+<span class="nc">.footer</span> <span class="p">{</span>
+  <span class="na">padding-left</span><span class="o">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+  <span class="na">padding-right</span><span class="o">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* Custom page header */</span>
+<span class="nc">.header</span> <span class="p">{</span>
+  <span class="na">border-bottom</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="mh">#e5e5e5</span><span class="p">;</span>
+  <span class="na">margin-bottom</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+
+  <span class="cm">/* Make the masthead heading the same height as the navigation */</span>
+  <span class="nt">h3</span> <span class="p">{</span>
+    <span class="na">margin-top</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="na">margin-bottom</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="na">line-height</span><span class="o">:</span> <span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">padding-bottom</span><span class="o">:</span> <span class="mi">19</span><span class="kt">px</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/* Custom page footer */</span>
+<span class="nc">.footer</span> <span class="p">{</span>
+  <span class="na">padding-top</span><span class="o">:</span> <span class="mi">19</span><span class="kt">px</span><span class="p">;</span>
+  <span class="na">color</span><span class="o">:</span> <span class="mh">#777</span><span class="p">;</span>
+  <span class="na">border-top</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="mh">#e5e5e5</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.container-narrow</span> <span class="o">&gt;</span> <span class="nt">hr</span> <span class="p">{</span>
+  <span class="na">margin</span><span class="o">:</span> <span class="mi">30</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* Main marketing message and sign up button */</span>
+<span class="nc">.jumbotron</span> <span class="p">{</span>
+  <span class="na">text-align</span><span class="o">:</span> <span class="no">center</span><span class="p">;</span>
+  <span class="na">border-bottom</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="mh">#e5e5e5</span><span class="p">;</span>
+
+  <span class="nc">.btn</span> <span class="p">{</span>
+    <span class="na">font-size</span><span class="o">:</span> <span class="mi">21</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">padding</span><span class="o">:</span> <span class="mi">14</span><span class="kt">px</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/* Supporting marketing content */</span>
+<span class="nc">.marketing</span> <span class="p">{</span>
+  <span class="na">margin</span><span class="o">:</span> <span class="mi">40</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="nt">p</span> <span class="o">+</span> <span class="nt">h4</span> <span class="p">{</span>
+    <span class="na">margin-top</span><span class="o">:</span> <span class="mi">28</span><span class="kt">px</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/* Responsive: Portrait tablets and up */</span>
+<span class="k">@media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="nd">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nc">.container</span> <span class="p">{</span>
+    <span class="na">max-width</span><span class="o">:</span> <span class="mi">730</span><span class="kt">px</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">.madLibTitle</span> <span class="p">{</span>
+    <span class="na">font-size</span><span class="o">:</span> <span class="mi">4</span><span class="mf">.5</span><span class="kt">em</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="cm">/* Remove the padding we set earlier */</span>
+  <span class="nc">.header</span><span class="o">,</span>
+  <span class="nc">.marketing</span><span class="o">,</span>
+  <span class="nc">.footer</span> <span class="p">{</span>
+    <span class="na">padding-left</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="na">padding-right</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="cm">/* Space out the masthead */</span>
+  <span class="nc">.header</span> <span class="p">{</span>
+    <span class="na">margin-bottom</span><span class="o">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="cm">/* Remove the bottom border on the jumbotron for visual effect */</span>
+  <span class="nc">.jumbotron</span> <span class="p">{</span>
+    <span class="na">border-bottom</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+  </div>
+</body>
+</html>

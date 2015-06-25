@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gruntfile.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="doc-style.css" />
+  <script src="doc-filelist.js"></script>
+  <script>
+    var relativeDir = "", thisFile = "Gruntfile.js", defaultSidebar = true;
+  </script>
+  <script src="doc-script.js"></script>
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+      <div class="heading h1">
+        <a href="#globbing">Globbing</a>
+      </div>
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container"><div class="background highlight"></div>
+<table cellpadding="0" cellspacing="0">
+  <tbody>
+      <tr>
+        <td class="docs">
+          <h1>Gruntfile.js</h1>
+        </td>
+        <td class="code highlight"></td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-1" id="section-1">&#182;</a>
+</div>
+<p>Generated on 2015-06-12 using generator-angular 0.11.1</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap" id="globbing">
+  <h1>
+    <a href="#globbing" name="globbing" class="pilcrow">&#182;</a>
+    Globbing
+  </h1>
+</div>
+
+
+<p>for performance reasons we're only matching one level down:
+'test/spec/{,<em>/}</em>.js'
+use this if you want to recursively match all subfolders:
+'test/spec/<em>*/</em>.js'</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-3" id="section-3">&#182;</a>
+</div>
+<p>Load grunt tasks automatically</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+  <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;load-grunt-tasks&#39;</span><span class="p">)(</span><span class="nx">grunt</span><span class="p">);</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-4" id="section-4">&#182;</a>
+</div>
+<p>Time how long tasks take. Can help when optimizing build times</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+  <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;time-grunt&#39;</span><span class="p">)(</span><span class="nx">grunt</span><span class="p">);</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-5" id="section-5">&#182;</a>
+</div>
+<p>Configurable paths for the application</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+  <span class="kd">var</span> <span class="nx">appConfig</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">app</span><span class="o">:</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./bower.json&#39;</span><span class="p">).</span><span class="nx">appPath</span> <span class="o">||</span> <span class="s1">&#39;app&#39;</span><span class="p">,</span>
+    <span class="nx">dist</span><span class="o">:</span> <span class="s1">&#39;dist&#39;</span>
+  <span class="p">};</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-6" id="section-6">&#182;</a>
+</div>
+<p>Define the configuration for all the tasks</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-7" id="section-7">&#182;</a>
+</div>
+<p>Project settings</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+    <span class="nx">yeoman</span><span class="o">:</span> <span class="nx">appConfig</span><span class="p">,</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-8" id="section-8">&#182;</a>
+</div>
+<p>Watches files for changes and runs tasks based on the changed files</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+    <span class="nx">watch</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">bower</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;bower.json&#39;</span><span class="p">],</span>
+        <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;wiredep&#39;</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nx">js</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;&lt;%= yeoman.app %&gt;/scripts/{,*/}*.js&#39;</span><span class="p">],</span>
+        <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;newer:jshint:all&#39;</span><span class="p">],</span>
+        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">livereload</span><span class="o">:</span> <span class="s1">&#39;&lt;%= connect.options.livereload %&gt;&#39;</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nx">jsTest</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;test/spec/{,*/}*.js&#39;</span><span class="p">],</span>
+        <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;newer:jshint:test&#39;</span><span class="p">,</span> <span class="s1">&#39;karma&#39;</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nx">compass</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;&lt;%= yeoman.app %&gt;/styles/{,*/}*.{scss,sass}&#39;</span><span class="p">],</span>
+        <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;compass:server&#39;</span><span class="p">,</span> <span class="s1">&#39;autoprefixer&#39;</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nx">gruntfile</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;Gruntfile.js&#39;</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nx">livereload</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">livereload</span><span class="o">:</span> <span class="s1">&#39;&lt;%= connect.options.livereload %&gt;&#39;</span>
+        <span class="p">},</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span>
+          <span class="s1">&#39;&lt;%= yeoman.app %&gt;/{,*/}*.html&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;.tmp/styles/{,*/}*.css&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;&lt;%= yeoman.app %&gt;/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}&#39;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-9" id="section-9">&#182;</a>
+</div>
+<p>The actual grunt server settings</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+    <span class="nx">connect</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">port</span><span class="o">:</span> <span class="mi">9000</span><span class="p">,</span>
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-10" id="section-10">&#182;</a>
+</div>
+<p>Change this to '0.0.0.0' to access the server from outside.</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+        <span class="nx">hostname</span><span class="o">:</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+        <span class="nx">livereload</span><span class="o">:</span> <span class="mi">35729</span>
+      <span class="p">},</span>
+      <span class="nx">livereload</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">open</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">middleware</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">connect</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">[</span>
+              <span class="nx">connect</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="s1">&#39;.tmp&#39;</span><span class="p">),</span>
+              <span class="nx">connect</span><span class="p">().</span><span class="nx">use</span><span class="p">(</span>
+                <span class="s1">&#39;/bower_components&#39;</span><span class="p">,</span>
+                <span class="nx">connect</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="s1">&#39;./bower_components&#39;</span><span class="p">)</span>
+              <span class="p">),</span>
+              <span class="nx">connect</span><span class="p">().</span><span class="nx">use</span><span class="p">(</span>
+                <span class="s1">&#39;/app/styles&#39;</span><span class="p">,</span>
+                <span class="nx">connect</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="s1">&#39;./app/styles&#39;</span><span class="p">)</span>
+              <span class="p">),</span>
+              <span class="nx">connect</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="nx">appConfig</span><span class="p">.</span><span class="nx">app</span><span class="p">)</span>
+            <span class="p">];</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nx">test</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">port</span><span class="o">:</span> <span class="mi">9001</span><span class="p">,</span>
+          <span class="nx">middleware</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">connect</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">[</span>
+              <span class="nx">connect</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="s1">&#39;.tmp&#39;</span><span class="p">),</span>
+              <span class="nx">connect</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">),</span>
+              <span class="nx">connect</span><span class="p">().</span><span class="nx">use</span><span class="p">(</span>
+                <span class="s1">&#39;/bower_components&#39;</span><span class="p">,</span>
+                <span class="nx">connect</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="s1">&#39;./bower_components&#39;</span><span class="p">)</span>
+              <span class="p">),</span>
+              <span class="nx">connect</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="nx">appConfig</span><span class="p">.</span><span class="nx">app</span><span class="p">)</span>
+            <span class="p">];</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">open</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">base</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.dist %&gt;&#39;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-11" id="section-11">&#182;</a>
+</div>
+<p>Make sure code styles are up to par and there are no obvious mistakes</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+    <span class="nx">jshint</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">jshintrc</span><span class="o">:</span> <span class="s1">&#39;.jshintrc&#39;</span><span class="p">,</span>
+        <span class="nx">reporter</span><span class="o">:</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jshint-stylish&#39;</span><span class="p">)</span>
+      <span class="p">},</span>
+      <span class="nx">all</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">src</span><span class="o">:</span> <span class="p">[</span>
+          <span class="s1">&#39;Gruntfile.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;&lt;%= yeoman.app %&gt;/scripts/{,*/}*.js&#39;</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nx">test</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">jshintrc</span><span class="o">:</span> <span class="s1">&#39;test/.jshintrc&#39;</span>
+        <span class="p">},</span>
+        <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;test/spec/{,*/}*.js&#39;</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-12" id="section-12">&#182;</a>
+</div>
+<p>Empties folders to start fresh</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+    <span class="nx">clean</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[{</span>
+          <span class="nx">dot</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">src</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s1">&#39;.tmp&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;&lt;%= yeoman.dist %&gt;/{,*/}*&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;!&lt;%= yeoman.dist %&gt;/.git{,*/}*&#39;</span>
+          <span class="p">]</span>
+        <span class="p">}]</span>
+      <span class="p">},</span>
+      <span class="nx">server</span><span class="o">:</span> <span class="s1">&#39;.tmp&#39;</span>
+    <span class="p">},</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-13" id="section-13">&#182;</a>
+</div>
+<p>Add vendor prefixed styles</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+    <span class="nx">autoprefixer</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">browsers</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;last 1 version&#39;</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nx">server</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">map</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[{</span>
+          <span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;.tmp/styles/&#39;</span><span class="p">,</span>
+          <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;{,*/}*.css&#39;</span><span class="p">,</span>
+          <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;.tmp/styles/&#39;</span>
+        <span class="p">}]</span>
+      <span class="p">},</span>
+      <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[{</span>
+          <span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;.tmp/styles/&#39;</span><span class="p">,</span>
+          <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;{,*/}*.css&#39;</span><span class="p">,</span>
+          <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;.tmp/styles/&#39;</span>
+        <span class="p">}]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-14" id="section-14">&#182;</a>
+</div>
+<p>Automatically inject Bower components into the app</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+    <span class="nx">wiredep</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">app</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;&lt;%= yeoman.app %&gt;/index.html&#39;</span><span class="p">],</span>
+        <span class="nx">ignorePath</span><span class="o">:</span>  <span class="sr">/\.\.\//</span>
+      <span class="p">},</span>
+      <span class="nx">test</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">devDependencies</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;&lt;%= karma.unit.configFile %&gt;&#39;</span><span class="p">,</span>
+        <span class="nx">ignorePath</span><span class="o">:</span>  <span class="sr">/\.\.\//</span><span class="p">,</span>
+        <span class="nx">fileTypes</span><span class="o">:</span><span class="p">{</span>
+          <span class="nx">js</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">block</span><span class="o">:</span> <span class="sr">/(([\s\t]*)\/{2}\s*?bower:\s*?(\S*))(\n|\r|.)*?(\/{2}\s*endbower)/gi</span><span class="p">,</span>
+              <span class="nx">detect</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">js</span><span class="o">:</span> <span class="sr">/&#39;(.*\.js)&#39;/gi</span>
+              <span class="p">},</span>
+              <span class="nx">replace</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">js</span><span class="o">:</span> <span class="s1">&#39;\&#39;{{filePath}}\&#39;,&#39;</span>
+              <span class="p">}</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nx">sass</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;&lt;%= yeoman.app %&gt;/styles/{,*/}*.{scss,sass}&#39;</span><span class="p">],</span>
+        <span class="nx">ignorePath</span><span class="o">:</span> <span class="sr">/(\.\.\/){1,2}bower_components\//</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-15" id="section-15">&#182;</a>
+</div>
+<p>Compiles Sass to CSS and generates necessary files if requested</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+    <span class="nx">compass</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">sassDir</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.app %&gt;/styles&#39;</span><span class="p">,</span>
+        <span class="nx">cssDir</span><span class="o">:</span> <span class="s1">&#39;.tmp/styles&#39;</span><span class="p">,</span>
+        <span class="nx">generatedImagesDir</span><span class="o">:</span> <span class="s1">&#39;.tmp/images/generated&#39;</span><span class="p">,</span>
+        <span class="nx">imagesDir</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.app %&gt;/images&#39;</span><span class="p">,</span>
+        <span class="nx">javascriptsDir</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.app %&gt;/scripts&#39;</span><span class="p">,</span>
+        <span class="nx">fontsDir</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.app %&gt;/styles/fonts&#39;</span><span class="p">,</span>
+        <span class="nx">importPath</span><span class="o">:</span> <span class="s1">&#39;./bower_components&#39;</span><span class="p">,</span>
+        <span class="nx">httpImagesPath</span><span class="o">:</span> <span class="s1">&#39;/images&#39;</span><span class="p">,</span>
+        <span class="nx">httpGeneratedImagesPath</span><span class="o">:</span> <span class="s1">&#39;/images/generated&#39;</span><span class="p">,</span>
+        <span class="nx">httpFontsPath</span><span class="o">:</span> <span class="s1">&#39;/styles/fonts&#39;</span><span class="p">,</span>
+        <span class="nx">relativeAssets</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nx">assetCacheBuster</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nx">raw</span><span class="o">:</span> <span class="s1">&#39;Sass::Script::Number.precision = 10\n&#39;</span>
+      <span class="p">},</span>
+      <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">generatedImagesDir</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.dist %&gt;/images/generated&#39;</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nx">server</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">sourcemap</span><span class="o">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-16" id="section-16">&#182;</a>
+</div>
+<p>Renames files for browser caching purposes</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+    <span class="nx">filerev</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">src</span><span class="o">:</span> <span class="p">[</span>
+          <span class="s1">&#39;&lt;%= yeoman.dist %&gt;/scripts/{,*/}*.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;&lt;%= yeoman.dist %&gt;/styles/{,*/}*.css&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;&lt;%= yeoman.dist %&gt;/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;&lt;%= yeoman.dist %&gt;/styles/fonts/*&#39;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-17" id="section-17">&#182;</a>
+</div>
+<p>Reads HTML for usemin blocks to enable smart builds that automatically
+concat, minify and revision files. Creates configurations in memory so
+additional tasks can operate on them</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+    <span class="nx">useminPrepare</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">html</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.app %&gt;/index.html&#39;</span><span class="p">,</span>
+      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.dist %&gt;&#39;</span><span class="p">,</span>
+        <span class="nx">flow</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">html</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">steps</span><span class="o">:</span> <span class="p">{</span>
+              <span class="nx">js</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;concat&#39;</span><span class="p">,</span> <span class="s1">&#39;uglifyjs&#39;</span><span class="p">],</span>
+              <span class="nx">css</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;cssmin&#39;</span><span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nx">post</span><span class="o">:</span> <span class="p">{}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-18" id="section-18">&#182;</a>
+</div>
+<p>Performs rewrites based on filerev and the useminPrepare configuration</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+    <span class="nx">usemin</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">html</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;&lt;%= yeoman.dist %&gt;/{,*/}*.html&#39;</span><span class="p">],</span>
+      <span class="nx">css</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;&lt;%= yeoman.dist %&gt;/styles/{,*/}*.css&#39;</span><span class="p">],</span>
+      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">assetsDirs</span><span class="o">:</span> <span class="p">[</span>
+          <span class="s1">&#39;&lt;%= yeoman.dist %&gt;&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;&lt;%= yeoman.dist %&gt;/images&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;&lt;%= yeoman.dist %&gt;/styles&#39;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-19" id="section-19">&#182;</a>
+</div>
+<p>The following <em>-min tasks will produce minified files in the dist folder
+By default, your <code>index.html</code>'s <!-- Usemin block --> will take care of
+minification. These next options are pre-configured if you do not wish
+to use the Usemin blocks.
+cssmin: {
+  dist: {
+    files: {
+      '&lt;%= yeoman.dist %>/styles/main.css': [
+        '.tmp/styles/{,</em>/}*.css'
+      ]
+    }
+  }
+},
+uglify: {
+  dist: {
+    files: {
+      '&lt;%= yeoman.dist %>/scripts/scripts.js': [
+        '&lt;%= yeoman.dist %>/scripts/scripts.js'
+      ]
+    }
+  }
+},
+concat: {
+  dist: {}
+},</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+
+    <span class="nx">imagemin</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[{</span>
+          <span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.app %&gt;/images&#39;</span><span class="p">,</span>
+          <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;{,*/}*.{png,jpg,jpeg,gif}&#39;</span><span class="p">,</span>
+          <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.dist %&gt;/images&#39;</span>
+        <span class="p">}]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="nx">svgmin</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[{</span>
+          <span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.app %&gt;/images&#39;</span><span class="p">,</span>
+          <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;{,*/}*.svg&#39;</span><span class="p">,</span>
+          <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.dist %&gt;/images&#39;</span>
+        <span class="p">}]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="nx">htmlmin</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">collapseWhitespace</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">conservativeCollapse</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">collapseBooleanAttributes</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">removeCommentsFromCDATA</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">removeOptionalTags</span><span class="o">:</span> <span class="kc">true</span>
+        <span class="p">},</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[{</span>
+          <span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.dist %&gt;&#39;</span><span class="p">,</span>
+          <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;*.html&#39;</span><span class="p">,</span> <span class="s1">&#39;views/{,*/}*.html&#39;</span><span class="p">],</span>
+          <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.dist %&gt;&#39;</span>
+        <span class="p">}]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-20" id="section-20">&#182;</a>
+</div>
+<p>ng-annotate tries to make the code safe for minification automatically
+by using the Angular long form for dependency injection.</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+    <span class="nx">ngAnnotate</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[{</span>
+          <span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;.tmp/concat/scripts&#39;</span><span class="p">,</span>
+          <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;*.js&#39;</span><span class="p">,</span>
+          <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;.tmp/concat/scripts&#39;</span>
+        <span class="p">}]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-21" id="section-21">&#182;</a>
+</div>
+<p>Replace Google CDN references</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+    <span class="nx">cdnify</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">html</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;&lt;%= yeoman.dist %&gt;/*.html&#39;</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-22" id="section-22">&#182;</a>
+</div>
+<p>Copies remaining files to places other tasks can use</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+    <span class="nx">copy</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[{</span>
+          <span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">dot</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.app %&gt;&#39;</span><span class="p">,</span>
+          <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.dist %&gt;&#39;</span><span class="p">,</span>
+          <span class="nx">src</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s1">&#39;*.{ico,png,txt}&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;.htaccess&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;*.html&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;views/{,*/}*.html&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;images/{,*/}*.{webp}&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;styles/fonts/{,*/}*.*&#39;</span>
+          <span class="p">]</span>
+        <span class="p">},</span> <span class="p">{</span>
+          <span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;.tmp/images&#39;</span><span class="p">,</span>
+          <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.dist %&gt;/images&#39;</span><span class="p">,</span>
+          <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;generated/*&#39;</span><span class="p">]</span>
+        <span class="p">},</span> <span class="p">{</span>
+          <span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span>
+          <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*&#39;</span><span class="p">,</span>
+          <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.dist %&gt;&#39;</span>
+        <span class="p">}]</span>
+      <span class="p">},</span>
+      <span class="nx">styles</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;&lt;%= yeoman.app %&gt;/styles&#39;</span><span class="p">,</span>
+        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;.tmp/styles/&#39;</span><span class="p">,</span>
+        <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;{,*/}*.css&#39;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-23" id="section-23">&#182;</a>
+</div>
+<p>Run some tasks in parallel to speed up the build process</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+    <span class="nx">concurrent</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">server</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s1">&#39;compass:server&#39;</span>
+      <span class="p">],</span>
+      <span class="nx">test</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s1">&#39;compass&#39;</span>
+      <span class="p">],</span>
+      <span class="nx">dist</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s1">&#39;compass:dist&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;imagemin&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;svgmin&#39;</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-24" id="section-24">&#182;</a>
+</div>
+<p>Test settings</p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+    <span class="nx">karma</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">unit</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">configFile</span><span class="o">:</span> <span class="s1">&#39;test/karma.conf.js&#39;</span><span class="p">,</span>
+        <span class="nx">singleRun</span><span class="o">:</span> <span class="kc">true</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+
+
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;serve&#39;</span><span class="p">,</span> <span class="s1">&#39;Compile then start a connect web server&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">target</span> <span class="o">===</span> <span class="s1">&#39;dist&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">task</span><span class="p">.</span><span class="nx">run</span><span class="p">([</span><span class="s1">&#39;build&#39;</span><span class="p">,</span> <span class="s1">&#39;connect:dist:keepalive&#39;</span><span class="p">]);</span>
+    <span class="p">}</span>
+
+    <span class="nx">grunt</span><span class="p">.</span><span class="nx">task</span><span class="p">.</span><span class="nx">run</span><span class="p">([</span>
+      <span class="s1">&#39;clean:server&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;wiredep&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;concurrent:server&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;autoprefixer:server&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;connect:livereload&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;watch&#39;</span>
+    <span class="p">]);</span>
+  <span class="p">});</span>
+
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;server&#39;</span><span class="p">,</span> <span class="s1">&#39;DEPRECATED TASK. Use the &quot;serve&quot; task instead&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">grunt</span><span class="p">.</span><span class="nx">log</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;The `server` task has been deprecated. Use `grunt serve` to start a server.&#39;</span><span class="p">);</span>
+    <span class="nx">grunt</span><span class="p">.</span><span class="nx">task</span><span class="p">.</span><span class="nx">run</span><span class="p">([</span><span class="s1">&#39;serve:&#39;</span> <span class="o">+</span> <span class="nx">target</span><span class="p">]);</span>
+  <span class="p">});</span>
+
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="p">[</span>
+    <span class="s1">&#39;clean:server&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;wiredep&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;concurrent:test&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;autoprefixer&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;connect:test&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;karma&#39;</span>
+  <span class="p">]);</span>
+
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;build&#39;</span><span class="p">,</span> <span class="p">[</span>
+    <span class="s1">&#39;clean:dist&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;wiredep&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;useminPrepare&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;concurrent:dist&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;autoprefixer&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;concat&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ngAnnotate&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;copy:dist&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;cdnify&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;cssmin&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;uglify&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;filerev&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;usemin&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;htmlmin&#39;</span>
+  <span class="p">]);</span>
+
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="p">[</span>
+    <span class="s1">&#39;newer:jshint&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;test&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;build&#39;</span>
+  <span class="p">]);</span>
+<span class="p">};</span>
+</pre></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+  </div>
+</body>
+</html>

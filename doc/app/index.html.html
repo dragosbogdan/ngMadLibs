@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>index.html</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="../doc-style.css" />
+  <script src="../doc-filelist.js"></script>
+  <script>
+    var relativeDir = "../", thisFile = "app/index.html", defaultSidebar = true;
+  </script>
+  <script src="../doc-script.js"></script>
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container"><div class="background highlight"></div>
+<table cellpadding="0" cellspacing="0">
+  <tbody>
+      <tr>
+        <td class="docs">
+          <h1>index.html</h1>
+        </td>
+        <td class="code highlight"></td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-1" id="section-1">&#182;</a>
+</div>
+
+        </td>
+        <td class="code highlight"><div class="highlight"><pre><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">class=</span><span class="s">&quot;no-js&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;&lt;/title&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;description&quot;</span> <span class="na">content=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width&quot;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Place favicon.ico and apple-touch-icon.png in the root directory --&gt;</span>
+    <span class="c">&lt;!-- build:css(.) styles/vendor.css --&gt;</span>
+    <span class="c">&lt;!-- bower:css --&gt;</span>
+    <span class="c">&lt;!-- endbower --&gt;</span>
+    <span class="c">&lt;!-- endbuild --&gt;</span>
+    <span class="c">&lt;!-- build:css(.tmp) styles/main.css --&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;styles/main.css&quot;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- endbuild --&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body</span> <span class="na">ng-app=</span><span class="s">&quot;ngMadLibsApp&quot;</span><span class="nt">&gt;</span>
+
+</pre></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="docs">
+<div class="pilwrap">
+  <a class="pilcrow" href="#section-2" id="section-2">&#182;</a>
+</div>
+
+<div class="highlight"><pre><code><span class="p">[</span><span class="k">if</span> <span class="nx">lt</span> <span class="nx">IE</span> <span class="mi">7</span><span class="p">]</span><span class="o">&gt;</span>
+</code></pre></div>
+
+
+
+<p><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]   </p>
+        </td>
+        <td class="code highlight"><div class="highlight"><pre>
+
+    <span class="c">&lt;!-- Add your site or application content here --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container mainContent&quot;</span> <span class="na">ng-controller=</span><span class="s">&quot;libMaker&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-4&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;img-responsive&quot;</span> <span class="na">src=</span><span class="s">&quot;./images/mad-lib-happy-face.png&quot;</span> <span class="na">alt=</span><span class="s">&quot;happy face&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-8&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;img-responsive&quot;</span> <span class="na">src=</span><span class="s">&quot;./images/ng-mad-libs-logo.png&quot;</span> <span class="na">alt=</span><span class="s">&quot;logo&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">&quot;madLibTitle&quot;</span><span class="nt">&gt;</span>Automate This!<span class="nt">&lt;/h1&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- row --&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-12&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">&quot;helpLine&quot;</span><span class="nt">&gt;</span>Please provide the following words:<span class="nt">&lt;/h2&gt;</span>
+          
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-12&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;label&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">name=</span><span class="s">&quot;genderOptions&quot;</span> <span class="na">id=</span><span class="s">&quot;male&quot;</span> <span class="na">value=</span><span class="s">&quot;male&quot;</span><span class="nt">&gt;</span>
+                Male
+              <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-12&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;label&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">name=</span><span class="s">&quot;genderOptions&quot;</span> <span class="na">id=</span><span class="s">&quot;female&quot;</span> <span class="na">value=</span><span class="s">&quot;female&quot;</span><span class="nt">&gt;</span>
+                Female
+              <span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control libInput&quot;</span> <span class="na">ng-model=</span><span class="s">&quot;maleName&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Male name&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control libInput&quot;</span> <span class="na">ng-model=</span><span class="s">&quot;jobTitle&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Job title&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control libInput&quot;</span> <span class="na">ng-model=</span><span class="s">&quot;tediousTask&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Tedious task&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control libInput&quot;</span> <span class="na">ng-model=</span><span class="s">&quot;dirtyTask&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Dirty task&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control libInput&quot;</span> <span class="na">ng-model=</span><span class="s">&quot;celebrity&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Celebrity&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control libInput&quot;</span> <span class="na">ng-model=</span><span class="s">&quot;uselessSkill&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Useless skill&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control libInput&quot;</span> <span class="na">ng-model=</span><span class="s">&quot;obnoxiousCelebrity&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Obnoxious celebrity&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control libInput&quot;</span> <span class="na">ng-model=</span><span class="s">&quot;hugeNumber&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Huge number&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control libInput&quot;</span> <span class="na">ng-model=</span><span class="s">&quot;adjective&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Adjective&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- row --&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- row --&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row madLib&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-12&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p&gt;&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;maleName&quot;</span> <span class="na">class=</span><span class="s">&quot;libTerm&quot;</span><span class="nt">&gt;</span>{{maleName}}<span class="nt">&lt;/span&gt;</span> was a <span class="nt">&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;jobTitle&quot;</span> <span class="na">class=</span><span class="s">&quot;libTerm&quot;</span><span class="nt">&gt;</span>{{jobTitle}}<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;!jobTitle&quot;</span> <span class="na">class=</span><span class="s">&quot;emptyTerm&quot;</span><span class="nt">&gt;</span>jobTitle<span class="nt">&lt;/span&gt;</span> who loved technology. Although she loved parts of her job, she absolutely hated  <span class="nt">&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;tediousTask&quot;</span> <span class="na">class=</span><span class="s">&quot;libTerm&quot;</span><span class="nt">&gt;</span>{{tediousTask}}<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;!tediousTask&quot;</span> <span class="na">class=</span><span class="s">&quot;emptyTerm&quot;</span><span class="nt">&gt;</span>tediousTask<span class="nt">&lt;/span&gt;</span> and <span class="nt">&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;dirtyTask&quot;</span> <span class="na">class=</span><span class="s">&quot;libTerm&quot;</span><span class="nt">&gt;</span>{{dirtyTask}}<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;!dirtyTask&quot;</span> <span class="na">class=</span><span class="s">&quot;emptyTerm&quot;</span><span class="nt">&gt;</span>dirtyTask<span class="nt">&lt;/span&gt;</span>. So, <span class="nt">&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;maleName&quot;</span> <span class="na">class=</span><span class="s">&quot;libTerm&quot;</span><span class="nt">&gt;</span>{{maleName}}<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;!maleName&quot;</span> <span class="na">class=</span><span class="s">&quot;emptyTerm&quot;</span><span class="nt">&gt;</span>maleName<span class="nt">&lt;/span&gt;</span> met with her life mentor <span class="nt">&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;celebrity&quot;</span> <span class="na">class=</span><span class="s">&quot;libTerm&quot;</span><span class="nt">&gt;</span>{{celebrity}}<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;!celebrity&quot;</span> <span class="na">class=</span><span class="s">&quot;emptyTerm&quot;</span><span class="nt">&gt;</span>celebrity<span class="nt">&lt;/span&gt;</span> who told her to learn how to <span class="nt">&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;uselessSkill&quot;</span> <span class="na">class=</span><span class="s">&quot;libTerm&quot;</span><span class="nt">&gt;</span>{{uselessSkill}}<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;!uselessSkill&quot;</span> <span class="na">class=</span><span class="s">&quot;emptyTerm&quot;</span><span class="nt">&gt;</span>uselessSkill<span class="nt">&lt;/span&gt;</span> with Thinkful. Thinkful didn&#39;t offer a course on <span class="nt">&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;uselessSkill&quot;</span> <span class="na">class=</span><span class="s">&quot;libTerm&quot;</span><span class="nt">&gt;</span>{{uselessSkill}}<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;!uselessSkill&quot;</span> <span class="na">class=</span><span class="s">&quot;emptyTerm&quot;</span><span class="nt">&gt;</span>uselessSkill<span class="nt">&lt;/span&gt;</span> so she studied programming instead.<span class="nt">&lt;/p&gt;</span>
+ 
+          <span class="nt">&lt;p&gt;</span>What a great decision! With her new skills, <span class="nt">&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;maleName&quot;</span> <span class="na">class=</span><span class="s">&quot;libTerm&quot;</span><span class="nt">&gt;</span>{{maleName}}<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;!maleName&quot;</span> <span class="na">class=</span><span class="s">&quot;emptyTerm&quot;</span><span class="nt">&gt;</span>maleName<span class="nt">&lt;/span&gt;</span> built a(n) <span class="nt">&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;adjective&quot;</span> <span class="na">class=</span><span class="s">&quot;libTerm&quot;</span><span class="nt">&gt;</span>{{adjective}}<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;!adjective&quot;</span> <span class="na">class=</span><span class="s">&quot;emptyTerm&quot;</span><span class="nt">&gt;</span>adjective<span class="nt">&lt;/span&gt;</span> robot named <span class="nt">&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;obnoxiousCelebrity&quot;</span> <span class="na">class=</span><span class="s">&quot;libTerm&quot;</span><span class="nt">&gt;</span>{{obnoxiousCelebrity}}<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;!obnoxiousCelebrity&quot;</span> <span class="na">class=</span><span class="s">&quot;emptyTerm&quot;</span><span class="nt">&gt;</span>obnoxiousCelebrity<span class="nt">&lt;/span&gt;</span> that not only loved <span class="nt">&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;dirtyTask&quot;</span> <span class="na">class=</span><span class="s">&quot;libTerm&quot;</span><span class="nt">&gt;</span>{{dirtyTask}}<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;!dirtyTask&quot;</span> <span class="na">class=</span><span class="s">&quot;emptyTerm&quot;</span><span class="nt">&gt;</span>dirtyTask<span class="nt">&lt;/span&gt;</span> but did it <span class="nt">&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;hugeNumber&quot;</span> <span class="na">class=</span><span class="s">&quot;libTerm&quot;</span><span class="nt">&gt;</span>{{hugeNumber}}<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">ng-if=</span><span class="s">&quot;!hugeNumber&quot;</span> <span class="na">class=</span><span class="s">&quot;emptyTerm&quot;</span><span class="nt">&gt;</span>hugeNumber<span class="nt">&lt;/span&gt;</span> faster.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- row --&gt;</span>
+
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- .container --&gt;</span>
+
+
+      <span class="c">&lt;!-- Google Analytics: change UA-XXXXX-X to be your site&#39;s ID --&gt;</span>
+       <span class="nt">&lt;script&gt;</span>
+         <span class="o">!</span><span class="kd">function</span><span class="p">(</span><span class="nx">A</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">g</span><span class="p">,</span><span class="nx">u</span><span class="p">,</span><span class="nx">l</span><span class="p">,</span><span class="nx">a</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="nx">A</span><span class="p">.</span><span class="nx">GoogleAnalyticsObject</span><span class="o">=</span><span class="nx">l</span><span class="p">,</span><span class="nx">A</span><span class="p">[</span><span class="nx">l</span><span class="p">]</span><span class="o">=</span><span class="nx">A</span><span class="p">[</span><span class="nx">l</span><span class="p">]</span><span class="o">||</span><span class="kd">function</span><span class="p">(){</span>
+         <span class="p">(</span><span class="nx">A</span><span class="p">[</span><span class="nx">l</span><span class="p">].</span><span class="nx">q</span><span class="o">=</span><span class="nx">A</span><span class="p">[</span><span class="nx">l</span><span class="p">].</span><span class="nx">q</span><span class="o">||</span><span class="p">[]).</span><span class="nx">push</span><span class="p">(</span><span class="nx">arguments</span><span class="p">)},</span><span class="nx">A</span><span class="p">[</span><span class="nx">l</span><span class="p">].</span><span class="nx">l</span><span class="o">=+</span><span class="k">new</span> <span class="nb">Date</span><span class="p">,</span><span class="nx">a</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="nx">g</span><span class="p">),</span>
+         <span class="nx">r</span><span class="o">=</span><span class="nx">n</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">g</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span><span class="nx">a</span><span class="p">.</span><span class="nx">src</span><span class="o">=</span><span class="nx">u</span><span class="p">,</span><span class="nx">r</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">r</span><span class="p">)</span>
+         <span class="p">}(</span><span class="nb">window</span><span class="p">,</span><span class="nb">document</span><span class="p">,</span><span class="s1">&#39;script&#39;</span><span class="p">,</span><span class="s1">&#39;//www.google-analytics.com/analytics.js&#39;</span><span class="p">,</span><span class="s1">&#39;ga&#39;</span><span class="p">);</span>
+
+         <span class="nx">ga</span><span class="p">(</span><span class="s1">&#39;create&#39;</span><span class="p">,</span> <span class="s1">&#39;UA-XXXXX-X&#39;</span><span class="p">);</span>
+         <span class="nx">ga</span><span class="p">(</span><span class="s1">&#39;send&#39;</span><span class="p">,</span> <span class="s1">&#39;pageview&#39;</span><span class="p">);</span>
+      <span class="nt">&lt;/script&gt;</span>
+
+      <span class="c">&lt;!-- build:js(.) scripts/vendor.js --&gt;</span>
+      <span class="c">&lt;!-- bower:js --&gt;</span>
+      <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;bower_components/jquery/dist/jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+      <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;bower_components/angular/angular.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+      <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+      <span class="c">&lt;!-- endbower --&gt;</span>
+      <span class="c">&lt;!-- endbuild --&gt;</span>
+
+          <span class="c">&lt;!-- build:js({.tmp,app}) scripts/scripts.js --&gt;</span>
+          <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;scripts/app.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+          <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;scripts/controllers/main.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+          <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;scripts/controllers/libMaker.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+          <span class="c">&lt;!-- endbuild --&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+  </div>
+</body>
+</html>
